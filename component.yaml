@@ -1,0 +1,24 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: rhbk-fbc-component-v4-14
+  namespace: rhtap-release-2-tenant
+  annotations:
+    image.redhat.com/generate: 'true'
+spec:
+  application: rhbk-release-v4-14
+  componentName: rhbk-fbc-component-v4-14
+  replicas: 0
+  resources:
+    requests:
+      cpu: 100m
+      memory: 512Mi
+  source:
+    git:
+      context: catalog/v4.14/
+      devfileUrl: >-
+        https://raw.githubusercontent.com/scoheb/rhbk-fbc/main/catalog/v4.14/devfile.yaml
+      dockerfileUrl: Dockerfile
+      revision: main
+      url: 'https://github.com/scoheb/rhbk-fbc'
+  targetPort: 50051
