@@ -3,7 +3,7 @@ apiVersion: appstudio.redhat.com/v1alpha1
 kind: EnterpriseContractPolicy
 metadata:
   name: fbc-standard
-  namespace: rhtap-release-2-tenant
+  namespace: rhbk-release-tenant
 spec:
   configuration:
     include:
